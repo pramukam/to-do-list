@@ -30,9 +30,10 @@
     <!-- Motivation section -->
     </div>
 
-    <div class="container mt-5 border border-success" style="background-color: #a1fab038;">
-        <p>Motivation <button class="btn btn-outline-secondary  btn-sm ms-3" onclick="myMotivation()">Refresh</button></p>
+    <div class="container mt-5 border border-success text-center" style="background-color: #a1fab038;">
+        <p class="text-decoration-underline">Daily Motivation</p>
         <div id="motivation"></div>
+        <button class="btn btn-outline-secondary  btn-sm ms-3" onclick="myMotivation()">Refresh</button>
     </div>
 
     
@@ -84,6 +85,13 @@
               completeButton.textContent="Complete"
               todoItem.appendChild(completeButton);
    
+          }
+
+          if(todos.length==0){
+              todoCount.textContent="0";
+              
+          }else{
+              todoCount.textContent=todos.length
           }
 
       }
